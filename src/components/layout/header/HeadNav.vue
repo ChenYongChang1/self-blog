@@ -71,8 +71,9 @@ export default {
         border-radius: 0 4px 4px 0;
         line-height: 28px;
         .day-search-icon {
-          width: 20px;
-          height: 20px;
+          width: 15px;
+          height: 15px;
+          margin: auto;
         }
       }
     }
