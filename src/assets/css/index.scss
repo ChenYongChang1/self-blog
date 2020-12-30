@@ -6,7 +6,7 @@ li {
   padding: 0;
 }
 body {
-  // background: url("/@//assets/imgs/common/bg.png") no-repeat fixed top;
+  background: url("/@/assets/imgs/common/bg.png") no-repeat fixed top;
 }
 * {
   box-sizing: border-box;
@@ -15,6 +15,9 @@ body {
   color: #2c3e50;
 }
 
+.day-block {
+  display: block;
+}
 .day-flex {
   display: flex;
 }
@@ -71,6 +74,12 @@ body {
 
 .day-text-center {
   text-align: center;
+}
+.day-text-left {
+  text-align: left;
+}
+.day-text-right {
+  text-align: right;
 }
 
 .day-hover-bg {
