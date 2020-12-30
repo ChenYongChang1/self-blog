@@ -1,0 +1,80 @@
+html,
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+body {
+  // background: url("/@//assets/imgs/common/bg.png") no-repeat fixed top;
+}
+* {
+  box-sizing: border-box;
+}
+#app {
+  color: #2c3e50;
+}
+
+.day-flex {
+  display: flex;
+}
+
+.day-flex-start {
+  justify-content: flex-start;
+}
+.day-flex-center {
+  justify-content: center;
+}
+.day-flex-end {
+  justify-content: flex-end;
+}
+.day-flex-space {
+  justify-content: space-between;
+}
+.day-align-center {
+  align-items: center;
+}
+
+.day-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.day-img-cover {
+  object-fit: cover;
+}
+.day-img-contain {
+  object-fit: contain;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+.font-13 {
+  font-size: 13px;
+}
+.font-14 {
+  font-size: 14px;
+}
+.font-16 {
+  font-size: 16px;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.day-pointer {
+  cursor: pointer;
+}
+
+.day-text-center {
+  text-align: center;
+}
+
+.day-hover-bg {
+  &:hover {
+    background: rgba(0, 0, 0, 0.01);
+  }
+}
