@@ -1,20 +1,16 @@
 <template>
   <div class="acticle-list">
-    <user-acticle-item
-      v-for="(item, index) in acticleList"
-      :key="`user-acticle-${index}`"
-      :user-row="item"
-    ></user-acticle-item>
+    <user-acticle-item v-for="(item, index) in acticleList" :key="`user-acticle-${index}`" :user-row="item" />
   </div>
 </template>
 
 <script>
 // import { defineAsyncComponent } from "vue";
-import UserActicleItem from "/@/components/acticle/UserActicleItem.vue";
+import UserActicleItem from '/@/components/acticle/UserActicleItem.vue'
 export default {
-  name: "ActicleList",
+  name: 'ActicleList',
   components: {
-    UserActicleItem,
+    UserActicleItem
     /* defineAsyncComponent({
       loader: () => import("/@/components/acticle/UserActicleItem.vue"),
       delay: 200,
@@ -27,10 +23,10 @@ export default {
   props: {
     acticleList: {
       type: Array,
-      default: () => [],
-    },
-  },
-};
+      default: () => []
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

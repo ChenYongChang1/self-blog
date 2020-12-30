@@ -1,16 +1,9 @@
 <template>
   <div class="user-acticle">
-    <div
-      v-if="userRow.author_user_info.user_name"
-      class="user-info jj-flex jj-flex-space jj-align-center jj-hover-bg"
-    >
+    <div v-if="userRow.author_user_info.user_name" class="user-info jj-flex jj-flex-space jj-align-center jj-hover-bg">
       <div class="user-count jj-flex">
         <div class="user-cover">
-          <img
-            class="jj-img jj-img-cover"
-            src="https://lc-gold-cdn.xitu.io/bac28828a49181c34110.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1"
-            alt=""
-          />
+          <img class="jj-img jj-img-cover" src="https://lc-gold-cdn.xitu.io/bac28828a49181c34110.png?imageView2/2/w/200/h/64/q/85/format/webp/interlace/1" alt="" />
         </div>
         <div class="user-title">
           <div class="title font-14">
@@ -46,19 +39,19 @@
 </template>
 
 <script>
-import { time } from "/@/assets/js/util";
+import { time } from '/@/assets/js/util'
 export default {
-  name: "UserActicleItem",
+  name: 'UserActicleItem',
   props: {
     userRow: {
       type: Object,
-      default: () => ({}),
-    },
+      default: () => ({})
+    }
   },
   setup() {
-    return { stempDiff: time.stempDiff };
-  },
-};
+    return { stempDiff: time.stempDiff }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

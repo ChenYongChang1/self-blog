@@ -1,13 +1,13 @@
 <template>
-  <div class="dayday-blog"></div>
+  <div class="dayday-blog">1</div>
 </template>
 
 <script>
-import { useState } from "/@/store/index";
+// import { useState } from '/@/store/index'
 export default {
-  name: "index",
-  setup() {},
-};
+  name: 'Index',
+  setup() {}
+}
 </script>
 
 <style lang="scss" scoped></style>

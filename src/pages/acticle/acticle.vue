@@ -1,18 +1,9 @@
 <template>
   <div class="container">
     <div class="acticle-box jj-flex jj-flex-space">
-      <div class="left-acticle" v-infinite-scroll="loadMore">
-        <acticle-filter
-          :sort-list="sortList"
-          :sort-id="sortId"
-          :sort-change="sortMethods"
-          :search-word="word"
-        ></acticle-filter>
-        <acticle-list-com
-          v-if="acticleList && acticleList.length"
-          :acticle-list="acticleList"
-          :sort-list="sortList"
-        ></acticle-list-com>
+      <div v-infinite-scroll="loadMore" class="left-acticle">
+        <acticle-filter :sort-list="sortList" :sort-id="sortId" :sort-change="sortMethods" :search-word="word" />
+        <acticle-list-com v-if="acticleList && acticleList.length" :acticle-list="acticleList" :sort-list="sortList" />
       </div>
       <div class="other-remain"></div>
     </div>
@@ -20,25 +11,25 @@
 </template>
 
 <script>
-import { watch } from "vue";
-import { useRoute } from "vue-router";
-import ActicleFilter from "/@/components/acticle/ActicleFilter.vue";
-import ActicleList from "/@/components/acticle/ActicleList.vue";
-import { Acticle, SortActicle } from "/@/methods/acticle/acticle.js";
+// import { watch } from 'vue'
+import { useRoute } from 'vue-router'
+import ActicleFilter from '/@/components/acticle/ActicleFilter.vue'
+import ActicleList from '/@/components/acticle/ActicleList.vue'
+import { Acticle, SortActicle } from '/@/methods/acticle/acticle.js'
 export default {
   components: { ActicleListCom: ActicleList, ActicleFilter },
   setup() {
-    const router = useRoute();
+    const router = useRoute()
     // 获取文章
-    const acticle = new Acticle(router.params);
+    const acticle = new Acticle(router.params)
     const {
       state: { word },
       getActicleList,
-      loadMore,
-    } = acticle;
+      loadMore
+    } = acticle
     // 获取前端排序的方法
-    const sortObject = new SortActicle(acticle);
-    const { sortList, sortId, acticleList, sortMethods } = sortObject;
+    const sortObject = new SortActicle(acticle)
+    const { sortList, sortId, acticleList, sortMethods } = sortObject
     // watch(
     //   () => router.path,
     //   (newVal) => {
@@ -54,10 +45,10 @@ export default {
       acticleList,
       sortMethods,
       sortList,
-      sortId,
-    };
-  },
-};
+      sortId
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

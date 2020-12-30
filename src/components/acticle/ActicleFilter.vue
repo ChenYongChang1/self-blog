@@ -1,57 +1,46 @@
 <template>
   <div class="acticle-filter jj-flex jj-flex-start jj-align-center">
-    <div
-      v-for="(item, index) in sortList"
-      :key="`filter-item-${index}`"
-      class="filter-item jj-pointer font-12"
-      :class="item.id === sortId ? 'active' : ''"
-      @click="sortChange(item.id)"
-    >
+    <div v-for="(item, index) in sortList" :key="`filter-item-${index}`" :class="item.id === sortId ? 'active' : ''" class="filter-item jj-pointer font-12" @click="sortChange(item.id)">
       {{ item.name }}
     </div>
-    <el-input
-      type="text"
-      placeholder="搜索"
-      v-model="acticleName"
-      @keydown.enter="searchActicle"
-    />
+    <el-input v-model="acticleName" type="text" placeholder="搜索" @keydown.enter="searchActicle" />
   </div>
 </template>
 
 <script>
-import { ref, inject, getCurrentInstance } from "vue";
-import { useRouter } from "vue-router";
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 export default {
-  name: "ActicleFilter",
+  name: 'ActicleFilter',
   props: {
     sortList: {
       type: Array,
-      default: () => [],
+      default: () => []
     },
     sortId: {
       type: Number,
-      default: 1,
+      default: 1
     },
     sortChange: {
       type: Function,
-      default: () => {},
+      default: () => {}
     },
     searchWord: {
       type: String,
-      default: '',
-    },
+      default: ''
+    }
   },
   setup(props, ctx) {
     // const { emit } = ctx;
-    console.log(props);
-    const router = useRouter();
-    const acticleName = ref(props.searchWord || "");
+    console.log(props)
+    const router = useRouter()
+    const acticleName = ref(props.searchWord || '')
     const searchActicle = () => {
-      router.push(`/acticle-${acticleName.value}`);
-    };
-    return { acticleName, searchActicle };
-  },
-};
+      router.push(`/acticle-${acticleName.value}`)
+    }
+    return { acticleName, searchActicle }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
