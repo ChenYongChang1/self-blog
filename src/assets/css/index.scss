@@ -1,7 +1,8 @@
 html,
 body,
 ul,
-li {
+li,
+p {
   margin: 0;
   padding: 0;
 }
@@ -36,6 +37,9 @@ body {
 }
 .day-align-center {
   align-items: center;
+}
+.day-flex-column {
+  flex-direction: column;
 }
 
 .day-img {

@@ -25,9 +25,7 @@ $bg-color: #262728;
 .search-acticle {
   width: 100%;
   height: 48px;
-  background: $bg-color;
   padding: 0 16px;
-  margin-bottom: 8px;
   .day-search {
     width: 32px;
     height: 32px;

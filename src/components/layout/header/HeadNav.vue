@@ -12,7 +12,7 @@
       </div>
       <div class="user-info day-flex day-flex-end day-align-center">
         <div class="user-cover day-pointer">
-          <img src="https://profile.csdnimg.cn/5/1/E/2_weixin_44067251" alt="" />
+          <img src="https://avatar.csdnimg.cn/5/1/E/2_weixin_44067251.jpg" alt="" />
         </div>
         <div class="add-acticle">
           <img class="day-img day-img-contain day-pointer" src="/@/assets/imgs/layout/header/add.svg" alt="" />
