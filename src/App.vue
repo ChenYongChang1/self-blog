@@ -1,6 +1,6 @@
 <template>
   <div class="dayday-blog">
-    <head-nav />
+    <!-- <head-nav /> -->
     <router-view :key="$route.fullPath" />
   </div>
 </template>
